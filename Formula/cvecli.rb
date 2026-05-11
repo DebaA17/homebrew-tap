@@ -15,7 +15,8 @@ class Cvecli < Formula
   end
 
   def install
-    bin.install "cvecli"
+    libexec.install "cvecli"
+    (bin/"cvecli").write_env_script libexec/"cvecli", CVECLI_VERSION: version.to_s
   end
 
   test do
