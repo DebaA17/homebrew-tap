@@ -103,6 +103,6 @@ class Reconlite < Formula
   end
 
   test do
-    assert_match "1.0.0", shell_output("#{bin}/reconlite --version")
+    assert_match version.to_s, shell_output("#{bin}/reconlite --version")
   end
 end
