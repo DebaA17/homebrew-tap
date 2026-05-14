@@ -9,6 +9,26 @@ class Reconlite < Formula
 
   depends_on "python@3.13"
 
+  depends_on "pkg-config" => :build
+  depends_on "libxml2"
+  depends_on "libxslt"
+  depends_on "rust" => :build
+
+  resource "maturin" do
+    url "https://files.pythonhosted.org/packages/7e/a5/f02d9661fe1321f6852ef740eda54fe257e91c5c906265db902d1989bc8/maturin-1.8.7-py3-none-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl"
+    sha256 "5e134fc67e7f28e9f57d01dc2603c243456f80e76f93ef54ee61a4403dccd7e3"
+  end
+
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/bb/63/f9e1ea081ce35720d8b92acde70daaedace594dc93b693c869e0d5910718/click-8.3.3.tar.gz"
+    sha256 "398329ad4837b2ff7cbe1dd166a4c0f8900c3ca3a218de04466f38f6497f18a2"
+  end
+
+  resource "lxml" do
+    url "https://files.pythonhosted.org/packages/28/30/9abc9e34c657c33834eaf6cd02124c61bdf5944d802aa48e69be8da3585d/lxml-6.1.0.tar.gz"
+    sha256 "bfd57d8008c4965709a919c3e9a98f76c2c7cb319086b3d26858250620023b13"
+  end
+
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/25/ee/6caf7a40c36a1220410afe15a1cc64993a1f864871f698c0f93acb72842a/certifi-2026.4.22.tar.gz"
     sha256 "8d455352a37b71bf76a79caa83a3d6c25afee4a385d632127b6afb3963f1c580"
@@ -65,11 +85,6 @@ class Reconlite < Formula
   end
 
   def install
-    inreplace "reconlite.py", "    from ddgs import DDGS\n", ""
-    inreplace "reconlite.py",
-              "        try:\n            # Use DuckDuckGo to search for subdomains\n",
-              "        if \"DDGS\" not in globals():\n            return []\n\n        try:\n            # Use DuckDuckGo to search for subdomains\n"
-
     venv = virtualenv_create(libexec, "python3.13")
     venv.pip_install resources
 
