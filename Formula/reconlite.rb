@@ -3,8 +3,8 @@ class Reconlite < Formula
 
   desc "Advanced DNS & domain reconnaissance tool"
   homepage "https://github.com/DebaA17/reconlite"
-  url "https://github.com/DebaA17/reconlite/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "50d45da27e4ab736a119c8a84a8d6c10f727c3e1b03443dba9548b9b2b815c7b"
+  url "https://github.com/DebaA17/reconlite/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "3b205b0a7c9b962b32e323cd3e0b4e510b40fb68913473c562527f1924f63625"
   license "MIT"
 
   depends_on "python@3.13"
