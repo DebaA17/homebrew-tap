@@ -14,11 +14,6 @@ class Reconlite < Formula
   depends_on "libxslt"
   depends_on "rust" => :build
 
-  resource "maturin" do
-    url "https://files.pythonhosted.org/packages/7e/a5/f02d9661fe1321f6852ef740eda54fe257e91c5c906265db902d1989bc8/maturin-1.8.7-py3-none-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl"
-    sha256 "5e134fc67e7f28e9f57d01dc2603c243456f80e76f93ef54ee61a4403dccd7e3"
-  end
-
   resource "click" do
     url "https://files.pythonhosted.org/packages/bb/63/f9e1ea081ce35720d8b92acde70daaedace594dc93b693c869e0d5910718/click-8.3.3.tar.gz"
     sha256 "398329ad4837b2ff7cbe1dd166a4c0f8900c3ca3a218de04466f38f6497f18a2"
@@ -86,6 +81,8 @@ class Reconlite < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.13")
+    # Install maturin first so primp can build
+    venv.pip_install "maturin>=1.5,<2.0"
     venv.pip_install resources
 
     libexec.install "reconlite.py"
