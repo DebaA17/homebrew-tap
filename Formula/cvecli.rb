@@ -1,17 +1,17 @@
 class Cvecli < Formula
   desc "Command-line tool to search CVEs using public APIs"
   homepage "https://github.com/DebaA17/CVE-scanner-cli"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.1.0/cvecli-1.1.0-macos.zip"
-    sha256 "eb550cfbc4c7e075de604ff76b86abe9f6aa867051b6a22fd4c1473c072df368"
+    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.1.1/cvecli-1.1.1-macos.zip"
+    sha256 "d4dd0e2661eb0de7372dabc3adc8161902e20be47766860a1fa22084fc112c39"
   end
 
   on_linux do
-    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.1.0/cvecli-1.1.0-linux.zip"
-    sha256 "25d954e9c5726866ece802f8cebd655c2f3093625fb848408463d373bc461dbc"
+    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.1.1/cvecli-1.1.1-linux.zip"
+    sha256 "afef0ebd5b0c2002ca9c0dc818f6c7689e0d6177a3f537eaaf08097a14d7a3c0"
   end
 
   def install
