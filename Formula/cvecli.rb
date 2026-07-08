@@ -1,15 +1,12 @@
 class Cvecli < Formula
-  desc "Command-line tool to search CVEs using public APIs"
+  desc "Search CVEs using public APIs"
   homepage "https://github.com/DebaA17/CVE-scanner-cli"
-  version "1.2.2"
   license "MIT"
 
-  on_macos do
+  if OS.mac?
     url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.2.2/cvecli-1.2.2-macos.zip"
     sha256 "a03b256eae53fb833e835d03e1dab3603ff87da7364839a9aaa83e49012d63b8"
-  end
-
-  on_linux do
+  else
     url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.2.2/cvecli-1.2.2-linux.zip"
     sha256 "c3cf53653ef1b365a095684ad823905325bd2ff0ec2a9039fe1294b77eb7ce85"
   end
@@ -20,7 +17,6 @@ class Cvecli < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/cvecli --version").strip
+    assert_match version.to_s, shell_output("#{bin}/cvecli --version")
   end
 end
-

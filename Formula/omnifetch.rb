@@ -1,5 +1,5 @@
 class Omnifetch < Formula
-  desc "CLI downloader for public files, articles, and media"
+  desc "Downloader for public files, articles, and media"
   homepage "https://github.com/DebaA17/omnifetch"
   url "https://github.com/DebaA17/omnifetch/archive/refs/tags/v1.0.3.tar.gz"
   sha256 "6b86ad09434a814fc5363580a516063bf513ad655937a2e86756a2b928c02715"
@@ -13,6 +13,6 @@ class Omnifetch < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/omnifetch -v").strip
+    assert_match version.to_s, shell_output("#{bin}/omnifetch -v")
   end
 end
