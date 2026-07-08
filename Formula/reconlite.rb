@@ -7,12 +7,11 @@ class Reconlite < Formula
   sha256 "3b205b0a7c9b962b32e323cd3e0b4e510b40fb68913473c562527f1924f63625"
   license "MIT"
 
-  depends_on "python@3.13"
-
   depends_on "pkg-config" => :build
+  depends_on "rust" => :build
   depends_on "libxml2"
   depends_on "libxslt"
-  depends_on "rust" => :build
+  depends_on "python@3.13"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/25/ee/6caf7a40c36a1220410afe15a1cc64993a1f864871f698c0f93acb72842a/certifi-2026.4.22.tar.gz"
