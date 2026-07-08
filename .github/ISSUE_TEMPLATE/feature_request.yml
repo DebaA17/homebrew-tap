@@ -1,0 +1,27 @@
+name: 💡 Feature Request
+description: Propose a new feature, enhancement, or formula addition
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to improve this tap or add a new formula? We'd love to hear it!
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Describe the feature or improvement you would like to see
+      placeholder: I want to be able to...
+    validations:
+      required: true
+  - type: textarea
+    id: solution-pitch
+    attributes:
+      label: Proposed Solution
+      description: A clear and concise description of what you want to happen
+      placeholder: Suggest an implementation or approach...
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered
