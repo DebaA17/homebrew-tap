@@ -1,8 +1,8 @@
 class Omnifetch < Formula
   desc "Downloader for public files, articles, and media"
   homepage "https://github.com/DebaA17/omnifetch"
-  url "https://github.com/DebaA17/omnifetch/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "6b86ad09434a814fc5363580a516063bf513ad655937a2e86756a2b928c02715"
+  url "https://github.com/DebaA17/omnifetch/archive/refs/tags/v1.0.6.tar.gz"
+  sha256 "4a0ddb3a3eccf73b17585c6b3e71d1da2343621c7dee674407164963547126e6"
   license "MIT"
 
   depends_on "go" => :build
