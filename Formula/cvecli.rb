@@ -4,11 +4,11 @@ class Cvecli < Formula
   license "MIT"
 
   if OS.mac?
-    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.3.0/cvecli-1.3.0-macos.zip"
-    sha256 "ec322ae4882806b1c6903de0a85aaaa601f809fb33a64f90a59cdefb754daa1b"
+    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.4.0/cvecli-1.4.0-macos.zip"
+    sha256 "sha256:b8cb19cb7b12b9098186579043316fadf4855bae3af3187a836d1c752c71f9da"
   else
-    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.3.0/cvecli-1.3.0-linux.zip"
-    sha256 "7d877adc355d324706d61ec57d06a5b5f7a9be5f1cd6bfc12f45874a2748dd98"
+    url "https://github.com/DebaA17/CVE-scanner-cli/releases/download/v1.4.0/cvecli-1.4.0-linux.zip"
+    sha256 "sha256:738088a6c4cbc4c255debaae9195608eca2ed6b3231908ce50d3299c922571d2"
   end
 
   def install
